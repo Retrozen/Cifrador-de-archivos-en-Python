@@ -11,7 +11,7 @@ def Instructions():
     print("Instructions:")
     print("1- Insert the name of the file + extension.")
     print("2- E to encrypt.")
-    print("3- D para descifrar.")
+    print("3- D to decrypt.")
 
 # Cifrar
 def Encrypt(key, filename):
