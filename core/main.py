@@ -13,7 +13,7 @@ def Instructions():
     print("2- E to encrypt.")
     print("3- D to decrypt.")
 
-# Cifrar
+# Encrypt
 def Encrypt(key, filename):
     chunksize = 64 * 1024
     outputExtension = ".bin"
@@ -37,7 +37,7 @@ def Encrypt(key, filename):
                 
                 outfile.write(encryptor.encrypt(chunk))
 
-# Descifrar
+# Decrypt
 def Decrypt(key, filename):
     chunksize = 64 * 1024
     outputFile = input("Output filename (Include extension): ")
@@ -58,7 +58,7 @@ def Decrypt(key, filename):
                 outfile.write(decryptor.decrypt(chunk))
             outfile.truncate(filesize)
 
-# Contraseña
+# Password
 def getKey(password):
     hasher = SHA256.new(password.encode('UTF-8'))
     return hasher.digest()
